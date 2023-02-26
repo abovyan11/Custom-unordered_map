@@ -7,6 +7,7 @@
 using namespace std::literals;
 //file_path is a path of a file in which are Key Value pairs
 //this fill is downloaded from the internet
+//to work properly give right local dir before compiling
 const char* file_path = "C:/Users/User/Desktop/k_USA.txt";
 
 template<typename Key,typename Value, typename Container>

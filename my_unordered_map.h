@@ -303,7 +303,7 @@ typename my_unordered_map<Key, Value>::iterator my_unordered_map<Key, Value>::er
             break;
         }
     //returns the value of the element following the removed one
-    return iterator(static_cast<My_List_iter>(iter_list.erase(element_position_.it)));
+    return iterator(iter_list.erase(element_position_.it));
 }
 template<class Key, class Value>
 typename my_unordered_map<Key, Value>::iterator
@@ -316,7 +316,7 @@ typename my_unordered_map<Key, Value>::iterator
     //As the max size of that bucket cannot exceed max_bucket_size the whole process will happen in const time.
     for (auto& i : find_in_bucket)
         if (i->first == key_)
-            return iterator(static_cast<My_List_iter>(i));
+            return iterator(i);
     return end();
 }
 template<class Key, class Value>
@@ -330,7 +330,7 @@ typename my_unordered_map<Key, Value>::const_iterator
     //As the max size of that bucket cannot exceed max_bucket_size the whole process will happen in const time.
     for (auto& i : find_in_bucket)
         if (i->first == key_)
-            return iterator(static_cast<My_List_iter>(i));
+            return const_iterator(i);
     return end();
 }
 
