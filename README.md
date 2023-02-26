@@ -1,4 +1,4 @@
-The whole implementation is done of my_unorderd_map class is done in the header file as it is a template class.
+The whole implementation of my_unorderd_map class is done in the header file as it is a template class.
 Some implementation explanation:
 The iter_list is a member of my_unordered_map, it is a list which keeps inserted pairs{const key,value}, and the iterator of my_unordered_map is constructed with the iterators of that list, so it iterates in order of insertion.
 As a Hash-table I use a vector of lists(lists keep iterators of the iter_list) named {buckets}, lists of vector cannot contain more than 10 elements(it is a custom given number). 
